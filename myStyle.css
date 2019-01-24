@@ -1,0 +1,147 @@
+* {
+ box-sizing: border-box;
+}
+
+.butt {
+  border: 4px solid white;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 10px;
+  margin: 5px;
+  width: 140px
+}
+
+.butt:hover, .butt:focus, .butt:active {
+  color: black;
+  background-color: white;
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+header {
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  font-family: sans-serif;
+  display: block;
+  margin: 4px;
+  padding: 10px;
+  min-height: 50px;
+}
+
+a {
+  font-size: 12px;
+  font-family: Arial;
+  color: black;
+  border-radius: 6px;
+  background-color: white;
+  padding: 4px;
+}
+
+body {
+  background-color: darkblue;
+  background-image: url("wallpaper2.jpg");
+  background-position: top;
+  background-repeat: repeat-y;
+}
+
+img {
+  border-radius: 10%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-color: black;
+}
+
+th, td {
+  padding: 8px;
+  color: black;
+  text-align: center;
+}
+
+#uscreen {
+  border-radius: 0%;
+}
+
+  #main {
+      min-height: 600px;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-flow: row;
+      color: black;
+  }
+
+  #main > article {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10pt;
+      margin: 4px;
+      padding: 20px;
+      flex: 3 1 60%;
+      order: 2;
+      font-size: 20px;
+      font-family: fantasy;
+
+  }
+
+  #main > nav {
+      margin: 4px;
+      padding: 5px;
+      flex: 1 6 20%;
+      order: 1;
+  }
+
+  #main > aside {
+      margin: 4px;
+      padding: 5px;
+      flex: 1 6 20%;
+      order: 3;
+  }
+
+  #artspc {
+    display: flex;
+    flex-flow: row;
+  }
+  #artspc > art1 {
+    order: 1;
+    /*width: 50%;*/
+
+  }
+  #artspc > art2 {
+    order: 2;
+    /*width: 50%;*/
+    padding-left: 25px;
+  }
+
+  /* Too narrow to support three columns */
+
+  @media all and (max-width: 600px) {
+      #main, #page {
+          flex-direction: column;
+      }
+
+      #main > article {
+        order: 1;
+      }
+      #main > nav {
+        order: 2;
+      }
+      #main > aside {
+        order: 3;
+      }
+      #navspc {
+        display: flex;
+        flex-flow: row;
+      }
+      #navspc > nav1 {
+        order: 1;
+      }
+      #navspc > nav2 {
+        order: 2;
+      }
+  }
