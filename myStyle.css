@@ -45,7 +45,6 @@ body {
   background-color: darkblue;
   background-image: url("wallpaper2.jpg");
   background-position: top;
-  background-repeat: repeat-y;
   background-attachment: fixed;
   background-size: 100%;
 }
